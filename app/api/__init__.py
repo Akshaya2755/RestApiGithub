@@ -2,7 +2,7 @@ from app.api.health import health_bp
 from app.api.employee import employee_bp
 from app.api.department import department_bp
 from app.api.salary import salary_bp
-from app.api.auth import auth_bp
+from app.api.auth import bp as auth_bp
 from app.api.students import bp as students_bp
 
 def register_blueprints(app):
@@ -12,6 +12,7 @@ def register_blueprints(app):
     app.register_blueprint(department_bp, url_prefix="/departments")
     app.register_blueprint(salary_bp, url_prefix="/salaries")
     app.register_blueprint(students_bp)
+
 
 
 
